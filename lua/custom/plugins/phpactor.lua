@@ -1,5 +1,11 @@
 return {
-  'phpactor/phpactor',
-  ft = { 'php' },
-  build = 'composer install --no-dev -o',
+  'gbprod/phpactor.nvim',
+  ft = 'php',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    'neovim/nvim-lspconfig',
+    -- If the update/install notification doesn't show properly,
+    -- you should also add here UI plugins like "folke/noice.nvim" or "stevearc/dressing.nvim"
+  },
+  opts = {},
 }
