@@ -5,5 +5,20 @@ return {
     -- See `:help ibl`
     main = 'ibl',
     opts = {},
+    config = function()
+      require('ibl').setup {
+        indent = { char = '┊' },
+        scope = { enabled = false },
+        exclude = {
+          filetypes = {
+            'checkhealth',
+            'dashboard',
+            'help',
+            'lazy',
+            'lspinfo',
+          },
+        },
+      }
+    end,
   },
 }
