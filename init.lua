@@ -154,13 +154,16 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.o.showcmd = true
+vim.o.visualbell = false
+
 local prefix = vim.fn.expand '~/.config'
 
 vim.opt.undodir = { prefix .. '/nvim/.undo//' }
 vim.opt.backupdir = { prefix .. '/nvim/.backup//' }
 vim.opt.directory = { prefix .. '/nvim/.swp//' }
 
-vim.opt.colorcolumn = '120'
+vim.opt.colorcolumn = '100'
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -730,6 +733,8 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         phpactor = {},
+        vue_ls = {},
+        tailwindcss = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
